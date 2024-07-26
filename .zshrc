@@ -82,4 +82,6 @@ export GPG_TTY=$(tty)
 # Created by `pipx` on 2024-06-29 15:56:17
 export PATH="$PATH:/home/sakthivel/.local/bin"
 source /usr/share/nvm/init-nvm.sh
-neofetch | lolcat
+#neofetch | lolcat
+# alias air='~/.air'
+ export PATH=$PATH:$(go env GOPATH)/bin

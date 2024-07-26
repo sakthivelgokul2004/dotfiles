@@ -12,3 +12,7 @@ extract zip file in :
 
 Use the grub-mkconfig tool to generate /boot/grub/grub.cf :
      sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+
+Kanta keyboard remaper 
+https://github.com/jtroo/kanata/blob/main/docs/setup-linux.md
