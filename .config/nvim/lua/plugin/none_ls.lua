@@ -1,8 +1,8 @@
-return{
+return {
 
-"nvimtools/none-ls.nvim",
-	
-	config=function()
+	"nvimtools/none-ls.nvim",
+
+	config = function()
 		local null_ls = require("null-ls")
 		local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 		null_ls.setup({
@@ -17,7 +17,7 @@ return{
 				--go install github.com/segmentio/golines@latest
 				null_ls.builtins.formatting.golines,
 			},
-		})	
+		})
 		on_attach = function(client, bufnr)
 			if client.supports_method("textDocument/formatting") then
 				vim.api.nvim_clear_autocmds({
@@ -32,9 +32,11 @@ return{
 					end,
 				})
 			end
-		end 
-vim.keymap.set('n', '<leader>ff', vim.lsp.buf.format,{})
+		end
+		vim.keymap.set("n", "<leader>ff", vim.lsp.buf.format, {})
 
-vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action,{})
+		vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
+
+		vim.keymap.set("i", "<C-o>", vim.lsp.buf.signature_help, {})
 	end,
 }
