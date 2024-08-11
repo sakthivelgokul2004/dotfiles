@@ -1,4 +1,5 @@
 
+
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
@@ -50,7 +51,7 @@ zinit cdreplay -q
 #eval "$(oh-my-posh init zsh  --config ~/.config/ohmyposh/conf.toml)" 
 #zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
 # History
-HISTSIZE=5000
+HISTSIZE=1000
 HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
@@ -71,6 +72,7 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 alias ls='ls --color'
 alias vim='nvim'
 alias c='clear'
+alias tmuxa='~/tmux-sessionizer'
 
 # Shell integrations
 eval "$(fzf --zsh)"
@@ -80,8 +82,5 @@ eval "$(fzf --zsh)"
 export GPG_TTY=$(tty)
 
 # Created by `pipx` on 2024-06-29 15:56:17
-export PATH="$PATH:/home/sakthivel/.local/bin"
-source /usr/share/nvm/init-nvm.sh
-#neofetch | lolcat
-# alias air='~/.air'
+#export PATH="$PATH:/home/sakthivel/.local/bin"
  export PATH=$PATH:$(go env GOPATH)/bin
