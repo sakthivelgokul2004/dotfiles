@@ -43,12 +43,12 @@ zinit light Aloxaf/fzf-tab
 #zinit snippet OMZP::command-not-found
 # Load completions
 autoload -Uz compinit && compinit
+ bindkey -v
+bindkey -s ^q  "tmux-sessionizer\n"
 
 zinit cdreplay -q
 
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh. [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-#eval "$(oh-my-posh init zsh  --config ~/.config/ohmyposh/conf.toml)" 
 #zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
 # History
 HISTSIZE=1000
@@ -72,7 +72,7 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 alias ls='ls --color'
 alias vim='nvim'
 alias c='clear'
-alias tmuxa='~/tmux-sessionizer'
+alias tmuxa='tmux-sessionizer'
 
 # Shell integrations
 eval "$(fzf --zsh)"
@@ -82,5 +82,5 @@ eval "$(fzf --zsh)"
 export GPG_TTY=$(tty)
 
 # Created by `pipx` on 2024-06-29 15:56:17
-#export PATH="$PATH:/home/sakthivel/.local/bin"
+export PATH="$PATH:/home/sakthivel/.local/bin"
  export PATH=$PATH:$(go env GOPATH)/bin

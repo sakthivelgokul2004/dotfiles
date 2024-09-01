@@ -1,5 +1,7 @@
- vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+require("config")
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
 	vim.fn.system({
@@ -13,40 +15,41 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require('lazy').setup({
+require("lazy").setup({
 	-- Detect tabstop and shiftwidth automatically
-	'tpope/vim-sleuth' ,
+	"tpope/vim-sleuth",
 	--{
-		-- Theme inspired by Atom
+	-- Theme inspired by Atom
 	--	'navarasu/onedark.nvim',
 	--	priority = 1000,
 	--	config = function()
 	--		vim.cmd.colorscheme 'onedark'
 	--	end,
 	--},
-	{ "catppuccin/nvim", name = "catppuccin",
+	{
+		"catppuccin/nvim",
+		name = "catppuccin",
 		priority = 1000,
 		config = function()
-			vim.cmd.colorscheme 'catppuccin'
-		end
-},
-	{import ="plugin"},
+			vim.cmd.colorscheme("catppuccin")
+		end,
+	},
+	{ import = "plugin" },
 
 	{
 		-- Set lualine as statusline
-		'nvim-lualine/lualine.nvim',
+		"nvim-lualine/lualine.nvim",
 		-- See `:help lualine.txt`
 		opts = {
 			options = {
 				icons_enabled = false,
-				theme = 'onedark',
-				component_separators = '|',
-				section_separators = '',
+				theme = "onedark",
+				component_separators = "|",
+				section_separators = "",
 			},
 		},
 	},
 	{
-		'ThePrimeagen/vim-be-good'
+		"ThePrimeagen/vim-be-good",
 	},
 })
-require("config")
