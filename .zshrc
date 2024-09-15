@@ -84,3 +84,4 @@ export GPG_TTY=$(tty)
 # Created by `pipx` on 2024-06-29 15:56:17
 export PATH="$PATH:/home/sakthivel/.local/bin"
  export PATH=$PATH:$(go env GOPATH)/bin
+export PATH="$HOME/.config/emacs/bin:$PATH"

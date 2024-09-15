@@ -1,8 +1,7 @@
 {
   "git.autofetch": true,
-  "workbench.activityBar.location": "top",
+  "workbench.activityBar.location": "bottom",
   "workbench.sideBar.location": "right",
-  "window.customTitleBarVisibility": "auto",
   "editor.formatOnSave": true,
   "editor.suggest.insertMode": "replace",
   "editor.linkedEditing": true,
@@ -14,9 +13,7 @@
   "breadcrumbs.enabled": false,
   "workbench.iconTheme": "material-icon-theme",
   "update.showReleaseNotes": false,
-  "workbench.activityBar.visible": false,
   "zenMode.hideLineNumbers": false,
-  "zenMode.hideTabs": false,
   "editor.lineNumbers": "relative",
   "vim.leader": "<Space>",
   "vim.hlsearch": true,
@@ -89,5 +86,12 @@
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "workbench.startupEditor": "none",
+  "editor.renderWhitespace": "none",
+  "editor.stickyScroll.enabled": false,
+  "editor.renderControlCharacters": false,
+  "workbench.editor.showTabs": "single",
+  "window.menuBarVisibility": "toggle",
+  "window.customTitleBarVisibility": "auto"
 }
